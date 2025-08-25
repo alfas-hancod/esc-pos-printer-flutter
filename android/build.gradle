@@ -1,20 +1,12 @@
+plugins {
+    id "com.android.library"
+    id "org.jetbrains.kotlin.android" version "2.1.0"
+}
+
 group 'br.com.samhaus.escposprinter'
 version '1.0-SNAPSHOT'
 
-buildscript {
-        ext.kotlin_version = '1.5.31'
 
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
-    }
-}
 
 rootProject.allprojects {
     repositories {
@@ -23,11 +15,9 @@ rootProject.allprojects {
     }
 }
 
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-
 android {
-    compileSdkVersion 31
+    compileSdkVersion 34
+    namespace "br.com.samhaus.escposprinter"
 
     defaultConfig {
         minSdkVersion 21
@@ -35,5 +25,12 @@ android {
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }

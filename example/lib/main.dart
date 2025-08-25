@@ -50,8 +50,7 @@ class _MyAppState extends State<MyApp> {
 
   _print() async {
     try {
-      var data = Uint8List.fromList(
-          utf8.encode(" Hello world Testing ESC POS printer..."));
+      var data = Uint8List.fromList(utf8.encode(" Hello world Testing ESC POS printer..."));
       await Escposprinter.write(data);
       // await Escposprinter.printRawData("text");
       // await Escposprinter.printText("Testing ESC POS printer...");
@@ -95,13 +94,11 @@ class _MyAppState extends State<MyApp> {
     return devices
         .map((device) => new ListTile(
               onTap: () {
-                _connect(int.parse(device['vendorid']),
-                    int.parse(device['productid']));
+                _connect(int.parse(device['vendorid']), int.parse(device['productid']));
               },
               leading: new Icon(Icons.usb),
-              title: new Text(device['manufacturer'] + " " + device['product']),
-              subtitle:
-                  new Text(device['vendorid'] + " " + device['productid']),
+              title: new Text(device['manufacturer'].toString() + " " + device['product'].toString()),
+              subtitle: new Text(device['vendorid'].toString() + " " + device['productid'].toString()),
             ))
         .toList();
   }

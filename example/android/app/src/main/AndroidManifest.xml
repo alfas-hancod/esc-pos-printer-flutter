@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="br.com.samhaus.example">
-  <uses-feature android:name="android.hardware.usb.host" />
+  <uses-permission android:name="android.permission.USB_PERMISSION" />
+  <uses-feature android:name="android.hardware.usb.host" android:required="false" />
   <application
     android:label="example"
     android:icon="@mipmap/ic_launcher">
@@ -12,6 +13,13 @@
       android:hardwareAccelerated="true"
       android:windowSoftInputMode="adjustResize"
       android:exported="true">
+      <intent-filter>
+        <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+      </intent-filter>
+
+      <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+        android:resource="@xml/device_filter" />
+
       <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
