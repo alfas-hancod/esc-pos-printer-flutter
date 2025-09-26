@@ -1,14 +1,20 @@
 PODS:
+  - escposprinter (0.0.1):
+    - FlutterMacOS
   - FlutterMacOS (1.0.0)
 
 DEPENDENCIES:
+  - escposprinter (from `Flutter/ephemeral/.symlinks/plugins/escposprinter/macos`)
   - FlutterMacOS (from `Flutter/ephemeral`)
 
 EXTERNAL SOURCES:
+  escposprinter:
+    :path: Flutter/ephemeral/.symlinks/plugins/escposprinter/macos
   FlutterMacOS:
     :path: Flutter/ephemeral
 
 SPEC CHECKSUMS:
+  escposprinter: 86100817f85ebd2d72934376dd0225de17babafb
   FlutterMacOS: d0db08ddef1a9af05a5ec4b724367152bb0500b1
 
 PODFILE CHECKSUM: 0d3963a09fc94f580682bd88480486da345dc3f0

@@ -1,13 +1,12 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/alfas/fvm/versions/3.35.0"
-export "FLUTTER_APPLICATION_PATH=/Users/alfas/Desktop/usb test/esc-pos-printer-flutter/example"
+export "FLUTTER_ROOT=/Users/alfas/fvm/versions/3.35.3"
+export "FLUTTER_APPLICATION_PATH=/Users/alfas/FlutterProjects/esc-pos-printer-flutter/example"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
-export "FLUTTER_CLI_BUILD_MODE=debug"
 export "DART_OBFUSCATION=false"
 export "TRACK_WIDGET_CREATION=true"
 export "TREE_SHAKE_ICONS=false"

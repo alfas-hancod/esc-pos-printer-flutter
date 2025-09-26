@@ -15,8 +15,12 @@ dependencies:
 # The following section is specific to Flutter.
 flutter:
   plugin:
-    androidPackage: br.com.samhaus.escposprinter
-    pluginClass: EscposprinterPlugin
+    platforms:
+      android:
+        package: br.com.samhaus.escposprinter
+        pluginClass: EscposprinterPlugin
+      macos:
+        pluginClass: EscposprinterPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
